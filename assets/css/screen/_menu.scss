@@ -1,0 +1,97 @@
+// =======================
+// Menu
+// =======================
+
+.offcanvas-description {//h3 description
+  max-width: 1020px;
+  clear: both;
+  font-size: 2rem;
+  padding-bottom: $spacer;
+  margin: $spacer*2 auto $spacer auto;
+  text-align: center;
+  border-bottom: 1px solid $midgrey;
+}
+.offcanvas-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.menu-wrap {
+  padding: 0 $spacer*2;
+}
+
+.accordion {
+
+  list-style-type: none;
+  width: 400px;
+ margin: $spacer auto $spacer*1.2 auto;
+}
+
+
+ .accordion li {
+  cursor: pointer;
+  display: block;
+  padding: 0 0 0 42px;
+ color: #fff;
+    opacity: 0.7;
+  font-size: 2.5rem;
+  position: relative;
+  transition: all 0.4s ease;
+
+  a {
+    color: #fff;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    text-decoration: none;
+    }
+  }
+}
+
+.accordion li:last-child { border-bottom: 0; }
+
+.accordion [class^="nav-"] a:before {
+  width: 35px;
+    content: "";
+    background-postion: center;
+    background-size: cover;
+    position: absolute;
+    left: -8px;
+    top: 2px;
+    height:35px;
+    }
+    
+.accordion .nav-home a:before {
+        background-image: url(https://howardlucas.io/post-images/bylucas/icon-one.png);
+    }
+.accordion .nav-about a:before {
+        background-image: url(https://howardlucas.io/post-images/bylucas/icon-two.png);
+    }
+.accordion .nav-getting-started a:before {
+        background-image: url(https://howardlucas.io/post-images/Octocat.png);
+    }
+.accordion .nav-basics a:before {
+        background-image: url(https://howardlucas.io/post-images/bylucas/icon-three.png);
+    }
+.accordion .nav-themes a:before {
+        background-image: url(https://howardlucas.io/post-images/bylucas/icon-four.png);
+    }
+.accordion .nav-blog a:before {
+        background-image: url(https://howardlucas.io/post-images/bylucas/icon-five.png);
+    }
+
+@media (max-width: 700px) {
+  .offcanvas-description {
+    @include margin(null $spacer 0 $spacer);
+  }
+    .menu-wrap {
+  margin-bottom: $spacer;
+}
+.accordion {
+
+  padding-left: 5.3rem;
+}
+}
+

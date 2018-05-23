@@ -1,0 +1,21 @@
+
+ <nav id="main-menu" class="offcanvas-nav" role="navigation">
+ 	 <h3 class="offcanvas-description">{{@blog.description}}</h3>
+ 	
+        <div class="offcanvas-wrap">
+
+        <div class="menu-wrap">
+        
+          
+{{#if @blog.navigation}}
+            {{navigation}}
+        {{/if}}
+
+
+      {{> "social"}}
+     
+</div><!-- menu-wrap -->
+ {{> "contact"}}
+</div>
+</nav>
+
