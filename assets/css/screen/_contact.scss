@@ -13,88 +13,22 @@
   p {
     width: 95%;
     margin: $spacer/4 auto $spacer/2 auto;
-  }
-}
-  
-  .form-container input[type="text"]:focus,
-  .form-container textarea:focus {
-    border: none;
-    background: transparent;
-    outline: none;
 
-    outline-width: 0; }
-
-  .form-container textarea {
-  line-height: 1.3;
+    a {
+      opacity: .7;
     }
-
-.md-label {
-  display: block;
-  font-size: 1.4rem;
-          transform: translateY(25px);
-  color: rgba(155,155, 155, 0.8);
-  transition: all 0.5s;
-  padding-left: 4px; }
-
-.md-input {
-  position: relative;
-  background: transparent;
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 8px 0;
-  font-size: 1.8rem;
-  color: #7f7f7f;
-  resize: none;
-  box-shadow: none;
-
-&:focus {
-box-shadow: none;
-}
+  }
 }
 
-.md-div {
-  padding: 0;
-  position: relative;
-  transition: all 0.5s; }
-
-.md-div:after,
-.md-div:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: tint($blue, 60%);
-  bottom: 0;
-  left: 0;
-  transition: all 0.7s; }
-
-.md-div::after {
-  background-color: tint($blue, 10%);
-          transform: scaleX(0); }
-
-.is-active, .is-completed {
-  padding: 15px 0 0 0; }
-
-.is-active::after {
-          transform: scaleX(1); }
-
-.is-active .md-label {
-  color: $blue; }
-
-.is-completed .md-label {
-  font-size: 12px;
-          transform: translateY(0);
-  padding: 0; }
-
-  .form-container .button-box {
-    text-align: center;
+@media screen and (max-width: 500px) {
+  .form-container {
+ margin: $spacer/2 $spacer/2 $spacer $spacer/2;
+ padding: $spacer/2 $spacer/2 $spacer $spacer/2;
+}
   }
 
-.form-container button {
-  width: 80%;
-  margin: 38px auto 0 auto;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-}
+  .bigger {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.6;
+  }

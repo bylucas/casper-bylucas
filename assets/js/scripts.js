@@ -79,17 +79,6 @@ $offcanvasToggle.click( function(e) {
 
           });
 
-////////////////////////////////////////////////////////////////////
-// SIMPLE IMAGE ROLLOVER - set the image class to 'rollover' and have a image-name_off.ext and image-name_on.ext available. ext - eg .png, .jpg
-
-    $("img.rollover").hover(
-        function () {
-            this.src = this.src.replace("_off", "_on");
-        },
-        function () {
-            this.src = this.src.replace("_on", "_off");
-        });
-
     // Back to top
     $(window).scroll(function() {
   var backToTopButton = $(".back-to-top");

@@ -92,3 +92,21 @@ h3 {
     }
 }
 }
+
+@media (max-width: 500px) {
+input[type="text"]{
+    padding-left: 0;
+            }
+#search-results {
+padding: 0 $spacer/1.5 $spacer/1.5 $spacer/1.5;
+
+h3 {
+    font-size: $font-size*1.8;
+    line-height: 1.4;
+}
+h5 {
+        font-size: $font-size*1.6;
+        }
+
+}
+}

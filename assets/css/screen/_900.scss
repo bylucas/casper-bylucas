@@ -46,19 +46,7 @@ a:hover {
 .post-card-tags a:hover,
 .post-card-title a:hover {
     text-decoration: none;
-    transition: all 0.7s ease;
-    transform: translate3D(0, -1px, 0) scale(1.02);
-
-    &:after {
-  width: 100%;
-}
-}
-
-.author-card-name a:hover:after,
-.author-card-name a:focus:after,
-.author-card-name2 a:hover:after,
-.author-card-name2 a:focus:after {
-    width: 100%;
+   opacity: 1;
 }
 
 .author-card-name a:hover,
@@ -81,4 +69,11 @@ a:hover {
         margin-top: -70px;
         padding-top: 0;
     }
+//Contact form hover
+.form-container p a:hover {
+    text-decoration: none;
+    opacity: 1;
+} 
 }
+
+

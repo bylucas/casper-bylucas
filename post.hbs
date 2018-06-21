@@ -37,92 +37,63 @@ into the {body} of the default.hbs template --}}
                 {{subscribe_form placeholder="youremail@example.com"}}
             </section>
             {{/if}}
-            <footer class="post-full-footer">
-                {{!-- If there are multiple authors for the post, display all of their avatars in a stack --}}
-                {{#has author="count:>1"}}
-                <section class="post-full-authors">
-                    <div class="post-full-authors-content">
-                        <p>This post was a collaboration between</p>
-                        <p>{{authors}}</p>
-                    </div>
-                    <ul class="author-list">
-                        {{#foreach authors}}
-                        <li class="author-list-item">
-                            <div class="author-card">
-                                <div class="basic-info">
-                                    {{#if profile_image}}
-                                    <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
-                                    {{else}}
-                                    <span class="avatar-wrapper">{{> "icons/avatar"}}</span>
-                                    {{/if}}
-                                    <h2>{{name}}</h2>
-                                </div>
-                                <div class="bio">
-                                    {{#if bio}}
-                                    <p>{{bio}}</p>
-                                    <p><a href="{{url}}">More posts</a> by {{name}}.</p>
-                                    {{else}}
-                                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
-                                    {{/if}}
-                                </div>
-                            </div>
-                            {{#if profile_image}}
-                            <a href="{{url}}" class="moving-avatar"><img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" /></a>
-                            {{else}}
-                            <a href="{{url}}" class="moving-avatar"><span class="avatar-wrapper">{{> "icons/avatar"}}</span></a>
-                            {{/if}}
-                        </li>
-                        {{/foreach}}
-                    </ul>
-                </section>
-                {{!-- If there is a single author for the post, display her/his information  --}}
-                {{else}}
-                {{!-- Everything inside the #author tags pulls data from the author --}}
-                {{#author}}
-                <section class="post-full-authors">
-                    <div class="post-full-authors-content">
-                        
-                        <h4 class="author-card-name2">{{name}}</h4>
-                        <a class="social social-fb" href="https://www.linkedin.com/in/bylucas/" target="_blank" rel="noopener">{{> "icons/linkedin"}}</a>
-                        <a class="social social-fb" href="https://plus.google.com/101288519844536376261" target="_blank" rel="noopener">{{> "icons/googleplus"}}</a>
-                        <a class="social social-fb" href="https://www.behance.net/howardl" target="_blank" rel="noopener">{{> "icons/behance"}}</a>
-                        <a class="social social-fb" href="https://github.com/bylucas" target="_blank" rel="noopener">{{> "icons/github"}}</a>
-                    </div>
-                    <ul class="author-list">
-                        
-                        <li class="author-list-item">
-                            <div class="author-card">
-                                <div class="basic-info">
-                                    {{#if profile_image}}
-                                    <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
-                                    {{else}}
-                                    <span class="avatar-wrapper">{{> "icons/avatar"}}</span>
-                                    {{/if}}
-                                    <h2>{{name}}</h2>
-                                </div>
-                                <div class="bio">
-                                    {{#if bio}}
-                                    <p>{{bio}}</p>
-                                    <p><a href="{{url}}">More posts</a> by {{name}}.</p>
-                                    {{else}}
-                                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
-                                    {{/if}}
-                                </div>
-                            </div>
-                            {{#if profile_image}}
-                            <a href="{{url}}" class="moving-avatar"><img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" /></a>
-                            {{else}}
-                            <a href="{{url}}" class="moving-avatar"><span class="avatar-wrapper">{{> "icons/avatar"}}</span></a>
-                            {{/if}}
-                        </li>
-                        
-                    </ul>
-                </div>
-            </section>
             
-            {{/author}}
-            {{/has}}
-        </footer>
+            <footer class="post-full-footer">
+
+                {{!-- There are two options for how we display the byline/author-info.
+                If the post has more than one author, we load a specific template
+                from includes/byline-multiple.hbs, otherwise, we just use the
+                default byline. --}}
+
+                {{#has author="count:>1"}}
+                    {{> "byline-multiple"}}
+                {{else}}
+                    {{> "byline-single"}}
+                {{/has}}
+
+ {{#contentFor "scripts"}}
+<script>
+// Adds delay to author card dropups to disappear. This gives enough
+// time for the user to interact with the author card while they move
+// the mouse from the avatar to the card. Also makes space for the
+// interacted avatar.
+$(document).ready(function () {
+var hoverTimeout;
+var direction = 'left';
+$('.author-list-item:first-child').addClass('first-child');
+function makeSpaceForAvatar(avatar) {
+if (avatar.hasClass('first-child')) {
+return;
+}
+$('.author-list-item').each(function(i, obj) {
+if ($(this)[0] != avatar[0]) {
+if (Number($(this).css('z-index')) > Number(avatar.css('z-index'))) {
+$(this).children('.moving-avatar').addClass('left');
+} else {
+$(this).children('.moving-avatar').addClass('right');
+}
+}
+});
+}
+$('.author-list-item').hover(function(){
+var $this = $(this);
+clearTimeout(hoverTimeout);
+$('.author-card').removeClass('hovered');
+$(this).children('.author-card').addClass('hovered');
+makeSpaceForAvatar($this);
+}, function() {
+var $this = $(this);
+$('.author-list-item').children('.moving-avatar').removeClass('left right');
+hoverTimeout = setTimeout(function() {
+$this.children('.author-card').removeClass('hovered');
+}, 800);
+});
+});
+</script>
+{{/contentFor}}
+           
+</footer>
+
         <section class="post-full-comments">
             <div id="disqus_thread"></div>
             <script>
@@ -243,42 +214,6 @@ ticking = false;
 window.addEventListener('scroll', onScroll, {passive: true});
 window.addEventListener('resize', onResize, false);
 update();
-});
-// Adds delay to author card dropups to disappear. This gives enough
-// time for the user to interact with the author card while they move
-// the mouse from the avatar to the card. Also makes space for the
-// interacted avatar.
-$(document).ready(function () {
-var hoverTimeout;
-var direction = 'left';
-$('.author-list-item:first-child').addClass('first-child');
-function makeSpaceForAvatar(avatar) {
-if (avatar.hasClass('first-child')) {
-return;
-}
-$('.author-list-item').each(function(i, obj) {
-if ($(this)[0] != avatar[0]) {
-if (Number($(this).css('z-index')) > Number(avatar.css('z-index'))) {
-$(this).children('.moving-avatar').addClass('left');
-} else {
-$(this).children('.moving-avatar').addClass('right');
-}
-}
-});
-}
-$('.author-list-item').hover(function(){
-var $this = $(this);
-clearTimeout(hoverTimeout);
-$('.author-card').removeClass('hovered');
-$(this).children('.author-card').addClass('hovered');
-makeSpaceForAvatar($this);
-}, function() {
-var $this = $(this);
-$('.author-list-item').children('.moving-avatar').removeClass('left right');
-hoverTimeout = setTimeout(function() {
-$this.children('.author-card').removeClass('hovered');
-}, 800);
-});
 });
 </script>
 {{/contentFor}}

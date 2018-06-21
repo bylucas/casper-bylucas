@@ -15,10 +15,12 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  overflow: hidden;
 }
 
 .menu-wrap {
-  padding: 0 $spacer*2;
+  padding: 0 $spacer*1.4;
+  margin-bottom: $spacer;
 }
 
 .accordion {
@@ -82,16 +84,37 @@
         background-image: url(https://howardlucas.io/post-images/bylucas/icon-five.png);
     }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .offcanvas-description {
     @include margin(null $spacer 0 $spacer);
   }
     .menu-wrap {
-  margin-bottom: $spacer;
+  margin-bottom: $spacer/2;
 }
 .accordion {
 
   padding-left: 5.3rem;
+  margin: $spacer auto;
 }
+}
+
+@media screen and (max-width: 500px) {
+
+  .offcanvas-description {
+    @include margin(null $spacer/2 0 $spacer/2);
+  }
+
+.menu-wrap {
+ @include margin(null $spacer);
+}
+
+.accordion li {
+  padding: 0 0 0 65px;
+  }
+  .accordion [class^="nav-"] a:before {
+    position: absolute;
+    left: 15px;
+    top: 2px;
+    }
 }
 

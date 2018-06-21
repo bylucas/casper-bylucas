@@ -130,3 +130,39 @@
     }
 }
 }
+
+@media screen and (max-width: 500px) {
+
+.subscribe-overlay-content {
+   //margin: -$spacer 0 0 0;
+    //padding:0;
+}
+   .subscribe-overlay-title {
+    //margin: 0 0 10px 0;
+    font-size: 3.5rem;
+    //line-height: 1.15em;
+}
+
+.subscribe-overlay-description {
+    margin: 0 auto 40px;
+    
+    font-size: 2rem;
+    
+    
+}
+
+.subscribe-overlay-close {
+    top: 10px;
+    right: 10px;
+    }
+
+    .subscribe-overlay form {
+    display: block;
+    max-width: 300px;
+}
+
+.subscribe-overlay button {
+    margin-top: 20px;
+   width: 200px;
+    }
+}

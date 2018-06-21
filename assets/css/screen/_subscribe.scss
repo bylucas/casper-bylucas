@@ -59,7 +59,8 @@
 }
 // and the contact form button
 .subscribe-form button,
-.form-container button {
+.form-container .subscribe-button,
+.social-wrap .subscribe-button {
     display: inline-block;
     margin: 0 0 0 10px;
     padding: 0 20px;
@@ -78,6 +79,13 @@
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
+.form-container .subscribe-button,
+.social-wrap .subscribe-button {
+    width: 50%;
+    margin: $spacer/4 auto;
+    display: block;
+}
+
 .subscribe-form button:active,
 .subscribe-form button:focus {
     background: linear-gradient(tint($blue, 10%), shade($blue, 10%)),;
@@ -93,13 +101,19 @@
 }
 
 @media (max-width: 500px) {
+
+    .subscribe-form {
+    margin: $spacer/2 auto $spacer auto;
+}
     .subscribe-form form {
         flex-direction: column;
     }
     .subscribe-form .form-group {
         width: 100%;
     }
-    .subscribe-form button {
+    .subscribe-form button,
+    .form-container .subscribe-button,
+    .social-wrap .subscribe-button {
         margin: 10px 0 0 0;
         width: 100%;
     }

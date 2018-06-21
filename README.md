@@ -2,7 +2,7 @@
 
 Based on the default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper-bylucas.
 
-![screenshot-desktop](https://user-images.githubusercontent.com/120485/27221326-1e31d326-5280-11e7-866d-82d550a7683b.jpg)
+![screenshot](assets/screenshot-desktop.jpg)
 
 ## Ghost
 
@@ -26,7 +26,7 @@ One really neat trick is that you can also create custom one-off templates just 
 - `author-ali.hbs` - Custom template for `/author/ali/` archive
 
 
-## Development
+## Theme Development
 All Scss files are still in place for further development. This theme as been developed with [CodeKit](https://codekitapp.com)
 
 
@@ -68,6 +68,17 @@ Usage (In Ghost editor):
 
     ![img](/some/image.jpg)
     <small>Your image caption</small>    
+
+___
+
+## To Do
+Make _Social group_ for each author. Need to assign a `social.hbs` to each author on the author page.
+
+Assign `author-portfolio.hbs` for each author on the author page and make the images used available on-line, so need to call them from _Ghost admin_.
+
+Assign `menu icons` to menu. Can be done at the moment with `menu item class` with the menu icons being called from the web, done in the ghost admin area.
+
+___
 
 ## Copyright & License
 

@@ -1,0 +1,49 @@
+{{!-- Everything inside the #author tags pulls data from the author --}}
+{{#author}}
+
+<section class="post-full-authors">
+
+    <div class="post-full-authors-content">
+       <h4 class="author-card-name2">{{name}}</h4>
+        <a class="social social-fb" href="https://www.linkedin.com/in/bylucas/" target="_blank" rel="noopener">{{> "icons/linkedin"}}</a>
+        <a class="social social-fb" href="https://plus.google.com/101288519844536376261" target="_blank" rel="noopener">{{> "icons/googleplus"}}</a>
+        <a class="social social-fb" href="https://www.behance.net/howardl" target="_blank" rel="noopener">{{> "icons/behance"}}</a>
+        <a class="social social-fb" href="https://github.com/bylucas" target="_blank" rel="noopener">{{> "icons/github"}}</a>
+    </div>
+
+    <ul class="author-list">
+    
+        <li class="author-list-item">
+
+            <div class="author-card">
+                <div class="basic-info">
+                    {{#if profile_image}}
+                        <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+                    {{else}}
+                       <span class="avatar-wrapper">{{> "icons/avatar"}}</span>
+                    {{/if}}
+                    <h2>{{name}}</h2>
+                </div>
+                <div class="bio">
+                    {{#if bio}}
+                        <p>{{bio}}</p>
+                        <p><a href="{{url}}">More posts</a> by {{name}}.</p>
+                    {{else}}
+                        <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                    {{/if}}
+                </div>
+            </div>
+
+            {{#if profile_image}}
+                <a href="{{url}}" class="moving-avatar"><img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" /></a>
+            {{else}}
+                <a href="{{url}}" class="moving-avatar"><span class="avatar-wrapper">{{> "icons/avatar"}}</span></a>
+            {{/if}}
+
+        </li>
+
+    </ul>
+
+</section>
+
+{{/author}}

@@ -40,7 +40,7 @@
                 <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
                 <nav class="site-footer-nav">
                     <a href="{{@blog.url}}">Latest Posts</a>
-                   <a href="sitemap/">Sitemap</a>
+                   <a href="/sitemap">Sitemap</a>
                    
                 </nav>
             </div>
@@ -82,6 +82,15 @@
     <script src="{{asset "js/min/prism-min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/min/jquery.ghosthunter-min.js"}}"></script>
     <script src="{{asset "js/min/scripts-min.js"}}"></script>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121067678-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-121067678-2');
+    </script>
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
 

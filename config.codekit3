@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26680",
 "files": {
+	"\/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/.gitattributes",
+		"oF": 0
+		},
 	"\/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -1259,16 +1266,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/images\/basics.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/images\/basics.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"\/assets\/images\/bylucas-cover.jpg": {
 		"ft": 16384,
 		"iS": 10919,
@@ -1464,6 +1461,20 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/partials\/author-portfolio.hbs",
+		"oF": 0
+		},
+	"\/partials\/byline-multiple.hbs": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/partials\/byline-multiple.hbs",
+		"oF": 0
+		},
+	"\/partials\/byline-single.hbs": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/partials\/byline-single.hbs",
 		"oF": 0
 		},
 	"\/partials\/contact.hbs": {
@@ -1787,6 +1798,14 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/sftp-config.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/sftp-config-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"\/tag.hbs": {
 		"cB": 0,
