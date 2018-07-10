@@ -5,10 +5,15 @@
  
   margin: $spacer;
   background: rgba(55, 55, 55, .4);
-  padding: $spacer/2 $spacer $spacer $spacer;
+  padding: 0 $spacer;
   border: $midgrey 1px solid;
   border-radius: 7px;
   max-width: 400px;
+
+  h3 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
 
   p {
     width: 95%;
@@ -27,8 +32,13 @@
 }
   }
 
-  .bigger {
-    font-size: 2rem;
+  .bigger,
+  .andbigger {
+    font-size: 2.5rem;
     text-align: center;
     line-height: 1.6;
+  }
+
+  .andbigger {
+    font-size: 2rem;
   }
