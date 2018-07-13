@@ -150,13 +150,6 @@
     display: none;
 }
 
-.kg-card-markdown {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 920px;
-}
-
 .post-full-content h1,
 .post-full-content h2,
 .post-full-content h3,
@@ -180,11 +173,6 @@
 
 .post-full-content li p {
     margin: 0;
-}
-
-.post-template .kg-card-markdown > p:first-child {
-    font-size: 1.25em;
-    line-height: 1.5em;
 }
 
 .post-full-content a {
@@ -228,6 +216,8 @@
     font-size: 1.7rem;
     font-style: italic;
     margin-bottom: 1em ;
+    margin-top: .5em;
+    line-height: 1.2;
 }
 
 @media (max-width: 1040px) {

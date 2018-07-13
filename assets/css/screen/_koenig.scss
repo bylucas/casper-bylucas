@@ -1,0 +1,88 @@
+//Koenig Styles
+//New post editor in ghost ----------------------------------------------------------
+
+// For Ghost 1.0
+.kg-card-markdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 920px;
+}
+
+.post-template .kg-card-markdown > p:first-child {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+// ^ .kg-card-markdown will be deprecated
+
+
+.post-template .kg-post > p:first-child {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+.kg-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 920px;
+}
+
+.post-full-content .kg-image {
+    max-width: 100%;
+}
+
+// Preventing full-width image overlap with post image.
+.post-full-image + .post-full-content .kg-post *:first-child .kg-image {
+    width: 100%;
+}
+
+.post-full-content .kg-image-wide {
+    max-width: 1040px;
+}
+
+.post-full-content .kg-image-full {
+    max-width: 100vw;
+}
+
+.kg-post figcaption {
+    font-size: 80%;
+    line-height: 1.6em;
+    text-align: center;
+}
+
+.kg-image-card {
+    margin: 0 0 1.5em;
+}
+
+.kg-image-card figcaption {
+    //margin: -1.0em 0 1.5em;
+}
+
+.kg-embed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5em 0 3em;
+    min-width: 100%;
+}
+
+.kg-embed-card figcaption {
+    margin: 0.5em 0 0;
+}
+
+.kg-embed-card .fluid-width-video-wrapper {
+    margin: 0;
+}
+
+
+.kg-image-full + figcaption {
+    padding: 0 1.5em;
+}
+
+
+@media (max-width: 1040px) {
+    .post-full-content .kg-image-full {
+        width: 100vw;
+    }
+}
