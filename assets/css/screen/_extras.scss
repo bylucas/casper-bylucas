@@ -96,3 +96,18 @@ $radius: 6px;
 			line-height: 1.2;
 		}
 	}
+
+@media (max-width: 500px) {
+.box-scss {
+	padding: $spacer/4 $spacer;
+	height: 140px;
+}
+
+.box6-scss {
+		$width: 280px;
+		width: $width;
+		p {
+			font-size: $width / 8;
+		}
+}
+}

@@ -2,18 +2,6 @@
 //New post editor in ghost ----------------------------------------------------------
 
 // For Ghost 1.0
-.kg-card-markdown {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 920px;
-}
-
-.post-template .kg-card-markdown > p:first-child {
-    font-size: 1.25em;
-    line-height: 1.5em;
-}
-// ^ .kg-card-markdown will be deprecated
 
 
 .post-template .kg-post > p:first-child {
@@ -21,18 +9,12 @@
     line-height: 1.5em;
 }
 
-.kg-post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 920px;
-}
 
 .post-full-content .kg-image {
     max-width: 100%;
 }
 
-// Preventing full-width image overlap with post image.
+//Preventing full-width image overlap with post image.
 .post-full-image + .post-full-content .kg-post *:first-child .kg-image {
     width: 100%;
 }
@@ -85,4 +67,24 @@
     .post-full-content .kg-image-full {
         width: 100vw;
     }
+}
+
+// new Ghost 2
+
+
+.kg-width-wide {
+  position: relative;
+  width: 85vw;
+  min-width: 100%;
+  margin: auto calc(50% - 50vw);
+  transform: translateX(calc(50vw - 50%));
+}
+
+.kg-width-full {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }

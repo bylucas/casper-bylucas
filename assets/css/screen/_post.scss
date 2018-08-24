@@ -19,13 +19,31 @@
 
 .post-full-header {
     margin: 0 auto;
-    padding: 6vw 3vw 3vw;
+    padding: 8vw 3vw 3vw 3vw;
     max-width: 1040px;
     text-align: center;
 }
+
+@media (max-width: 800px) {
+    .post-full-header {
+        padding: 11vw 3vw 4vw 3vw;
+    }
+
+    .post-full-title {
+    font-size: 4rem;
+}
+}
+
+@media (max-width: 700px) {
+
+    .post-full-title {
+    font-size: 3.4rem;
+}
+}
+
 @media (max-width: 500px) {
     .post-full-header {
-        padding: 14vw 3vw 10vw;
+        padding: 21vw 3vw 5vw 3vw;
     }
 }
 
@@ -474,11 +492,15 @@ a.footnote {
         height: 350px;
     }
     .post-full-content {
-        padding: 0;
+        padding: $spacer/2 0 0 0;
     }
     .post-full-content:before,
     .post-full-content:after {
         display: none;
+    }
+
+    .post-full-content p {
+        margin-bottom: .75em;
     }
 }
 
@@ -529,7 +551,7 @@ table caption {
 // CONDENSED ====================================================
 
 .table-condensed {
-  
+
   th,
   td {
     padding: .2rem .25rem;

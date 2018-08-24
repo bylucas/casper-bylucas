@@ -5,11 +5,13 @@
 .offcanvas-description {//h3 description
   max-width: 1020px;
   clear: both;
-  font-size: 2rem;
+  font-size: 3rem;
   padding-bottom: $spacer;
   margin: $spacer*2 auto $spacer auto;
   text-align: center;
   border-bottom: 1px solid $midgrey;
+  font-style: italic;
+  letter-spacing: 2px;
 }
 .offcanvas-wrap {
   display: flex;
@@ -107,6 +109,7 @@
 
   .offcanvas-description {
     @include margin(null $spacer/2 0 $spacer/2);
+    font-size: 2rem;
   }
 
 .menu-wrap {

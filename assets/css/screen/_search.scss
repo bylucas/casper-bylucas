@@ -32,7 +32,7 @@
                 border-bottom: 4px solid $main-color;
                 box-shadow: none;
                 @include padding($spacer/5 null);
-                
+
                 &:focus{
                     outline: none;
                 }
@@ -54,6 +54,7 @@ h3 {
     text-align: center;
     font-size: $font-size*2;
     letter-spacing: 2px;
+    font-style: italic;
     margin-top: 0;
 }
 
@@ -73,7 +74,7 @@ h3 {
 
   .search-loader{
     display: none;
-    
+
     }
 
 
@@ -94,14 +95,16 @@ h3 {
 }
 
 @media (max-width: 500px) {
-input[type="text"]{
+
+.searchform input[type="text"]{
     padding-left: 0;
+    font-size: 50px;
             }
 #search-results {
 padding: 0 $spacer/1.5 $spacer/1.5 $spacer/1.5;
 
 h3 {
-    font-size: $font-size*1.8;
+    font-size: $font-size*1.4;
     line-height: 1.4;
 }
 h5 {

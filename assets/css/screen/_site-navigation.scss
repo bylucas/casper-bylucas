@@ -91,7 +91,8 @@
     }
 }
 
-.page-template #masthead {
+.page-template #masthead,
+.post-template #masthead {
   background-color: $header-dark;
 }
 

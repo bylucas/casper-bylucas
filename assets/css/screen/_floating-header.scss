@@ -24,7 +24,7 @@
 }
 
 .floating-header-logo {
-    overflow: hidden;
+    //overflow: hidden;
     margin: 0 0 0 20px;
     font-size: 1.6rem;
     line-height: 1em;
@@ -173,6 +173,13 @@
     width: 50%;
     height: inherit;
     background-color: $blue;
+}
+
+//stop the #masthead showing while .active-header active
+
+.hide-header {
+    display: none !important;
+    visibility: hidden;
 }
 
 @media (max-width: 900px) {

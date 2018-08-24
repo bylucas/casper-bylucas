@@ -14,7 +14,7 @@ $searchMenu        = $('#search-menu'),
 // Wait for window load
   setTimeout(function(){
     $body.addClass('loaded');
-  }, 1000);
+  }, 800);
 
  $(window).scroll(function(event){
             if(timer) {
@@ -118,7 +118,7 @@ $offcanvasToggle.click( function(e) {
     if (!e.data.multiple) {
       $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
     };
-  } 
+  }
 
   var accordion = new Accordion($('#accordion'), false);
 });
@@ -151,118 +151,3 @@ searchField.clear();
 
 
 }); // end page load scripts
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

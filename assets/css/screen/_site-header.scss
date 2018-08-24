@@ -10,9 +10,10 @@
     background-size: cover;
 }
 
-.page-template .site-header {
+.page-template .site-header,
+.post-template .site-header {
     padding: 0;
-    background: transparent;
+    background: #fff;
 }
 
 .site-header:before {
@@ -26,6 +27,11 @@
     display: block;
     background: rgba(0,0,0,0.18);
      //background: $white;
+}
+
+.post-template .site-header:before,
+.post-template .site-header:after {
+    background: 0;
 }
 
 .site-header:after {

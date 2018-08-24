@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26680",
 "files": {
+	"\/.editorconfig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/.editorconfig",
+		"oF": 0
+		},
 	"\/.gitattributes": {
 		"cB": 0,
 		"ft": 8192,
@@ -1468,6 +1475,14 @@
 		"oAP": "\/LICENSE",
 		"oF": 0
 		},
+	"\/package.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/package.json",
+		"oF": 3,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/page-sitemap.hbs": {
 		"cB": 0,
 		"ft": 8192,
@@ -1807,6 +1822,13 @@
 		"oAP": "\/post.hbs",
 		"oF": 0
 		},
+	"\/post2.hbs": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/post2.hbs",
+		"oF": 0
+		},
 	"\/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -1848,7 +1870,7 @@
 "projectAttributes": {
 	"creationDate": 547242360,
 	"displayValue": "casper-bylucas",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-trap",
 	"iconImageWasSetByUser": 0
 	},
